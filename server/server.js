@@ -36,7 +36,7 @@ paypal.configure({
 
 //Multer files uploadinmg 
 let storage = multer.diskStorage({
-    destination: path.join(__dirname, "./public/upload/"),
+    destination: path.join(__dirname, "./build"),
     filename: function (req, file, cb) {
         cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
     }
