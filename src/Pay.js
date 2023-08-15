@@ -8,7 +8,7 @@ function Pay() {
     function Mu() {
         axios.post("https://image-back.onrender.com/req",{text})
 
-        fetch("http://localhost:8000/pay").then((res) => res.json()).then((data) => {
+        fetch("https://image-back.onrender.com/pay").then((res) => res.json()).then((data) => {
             window.location = data.url
         })
 
