@@ -6,7 +6,7 @@ import axios from "axios";
 function Pay() {
     let [text,setText]=useState('');
     function Mu() {
-        axios.post("http://localhost:8000/req",{text})
+        axios.post("https://image-backend-358z.onrender.com/req",{text})
 
         fetch("http://localhost:8000/pay").then((res) => res.json()).then((data) => {
             window.location = data.url
