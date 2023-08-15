@@ -44,6 +44,7 @@ function Home() {
 
 
                         </span>
+                <h5 class="text-center">{el.date}</h5>
 
                     </div>
                 </div >
