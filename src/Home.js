@@ -37,7 +37,7 @@ function Home() {
             </h2>
             {data.map((el) => {
                 return <div class="card mb-3 mx-4 my-3">
-                    <img src={`../upload/${el.img}`} class="card-img" alt="Image here" />
+                    <img src={`./build/${el.img}`} class="card-img" alt="Image here" />
                     <div class="card-body">
                         <span onClick={()=>del(el._id)} class="bg-blue" >
                             <i   class="fa-sharp fa-solid fa-trash fa-lg " ></i>
