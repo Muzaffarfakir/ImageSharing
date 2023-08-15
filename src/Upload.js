@@ -14,7 +14,7 @@ function Upload(e) {
       
         axios({
             method: "post",
-            url: "http://localhost:8000",
+            url: "https://image-backend-358z.onrender.com/",
             data: data,
             config: {
                 headers: {
