@@ -11,7 +11,7 @@ function Home() {
     let nav=useNavigate()
 
     let infi = (e) => {
-        fetch("http://localhost:8000/data").then((res) => res.json()).then((d) => {
+        fetch("https://image-backend-358z.onrender.com/data").then((res) => res.json()).then((d) => {
             setData(d.data)
         });
     }
@@ -22,7 +22,7 @@ function Home() {
 
 
     function del(id) {
-      axios.delete(`http://localhost:8000/del/${id}`)
+      axios.delete(`https://image-backend-358z.onrender.com/del/${id}`)
       nav('/Complain')
 
 
