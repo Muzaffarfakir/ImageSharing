@@ -62,9 +62,7 @@ app.use(express.static(path.join(__dirname,"../image/build")))
 
 //////Routing all here
 let datee = new Date();
-app.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname,"../image/build/index.html"))
-})
+
 app.post("/", upload.single("img"), (req, res) => {
     let data = new collection({
         img: req.file.filename,
