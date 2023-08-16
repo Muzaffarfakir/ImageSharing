@@ -22,7 +22,7 @@ function Home() {
 
 
     function del(id) {
-      axios.delete(`https://image-back.onrender.com//del/${id}`)
+      axios.delete(`https://image-back.onrender.com/del/${id}`)
       nav('/Complain')
 
 
