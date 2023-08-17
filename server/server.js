@@ -68,7 +68,7 @@ app.post("/", upload.single("img"), (req, res) => {
         let url = req.protocol + "://" + req.get("host");
     console.log(url);
     let data = new collection({
-        img: url+"/image/"+req.file.filename,
+        img: url+"/"+req.file.filename,
         date: datee.toISOString().split("T")[0]
     })
     data.save();
