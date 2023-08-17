@@ -36,7 +36,7 @@ paypal.configure({
 
 //Multer files uploadinmg 
 let storage = multer.diskStorage({
-    destination:  path.join(__dirname, './public/upload'),
+    destination:  path.join(__dirname, 'image'),
     filename: function (req, file, cb) {
         cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
     }
@@ -59,13 +59,16 @@ app.use(bodyparser.json({ limit: "10000kb" }));
 app.use(bodyparser.urlencoded({ limit: "10000kb", extended: true }));
 app.use(cors())
 app.use(express.static(path.join(__dirname,"../image/build")))
+app.use(express.static(__dirname,"image"))
 
 //////Routing all here
 let datee = new Date();
 
 app.post("/", upload.single("img"), (req, res) => {
+        let url = req.protocol + "://" + req.get("host");
+
     let data = new collection({
-        img: req.file.filename,
+        img: url+"image"+req.file.filename,
         date: datee.toISOString().split("T")[0]
     })
     data.save();
