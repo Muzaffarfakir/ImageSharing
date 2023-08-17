@@ -59,7 +59,7 @@ app.use(bodyparser.json({ limit: "10000kb" }));
 app.use(bodyparser.urlencoded({ limit: "10000kb", extended: true }));
 app.use(cors())
 //app.use(express.static(path.join(__dirname,"../image/build")))
-app.use(express.static(__dirname,"image"))
+app.use(express.static(path.join(__dirname,"image")))
 
 //////Routing all here
 let datee = new Date();
